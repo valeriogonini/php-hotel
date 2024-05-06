@@ -84,21 +84,19 @@ $hotels = [
                 <tr>
                     <th scope="row"><?php echo $name; ?> </th>
                     <td><?php echo $description; ?></td>
-                    <td><?php echo $parking; ?></td>
+                    <td>
+                        <?php if ($parking === true) {
+                            echo 'Si';
+                        } else {
+                            echo 'No';
+                        }
+                        ?>
+
+                    </td>
                     <td><?php echo $vote; ?></td>
                     <td><?php echo $distance; ?></td>
                 </tr>
-                <!-- <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr> -->
+
             </tbody>
         <?php
         }
